@@ -8,6 +8,9 @@ using NotesApp.Core;
 using NotesApp.Core.Models;
 using NotesApp.Droid.Adapters;
 using System.Collections.Generic;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace NotesApp.Droid
 {
@@ -42,6 +45,9 @@ namespace NotesApp.Droid
             };
 
             addButton.Click += addButton_Click;
+
+            AppCenter.Start("f7cd5040-9c64-4b0a-88cf-8f852c8282b4",
+                   typeof(Analytics), typeof(Crashes));
 
         }
 
